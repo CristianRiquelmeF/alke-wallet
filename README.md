@@ -24,15 +24,12 @@ Simulación de una billetera virtual (E-wallet). Este proyecto es una aplicació
     *   Formularios simulados para depositar y enviar dinero.
 4.  **Diseño Responsivo:** Adaptable a dispositivos móviles y escritorio.
 
-## Cómo ejecutar el proyecto
 
-1.  Clona este repositorio o descarga el archivo ZIP.
-2.  Asegúrate de que la estructura de carpetas sea correcta (imágenes en `assets/img`, estilos en `assets/css`, scripts en `js/`).
-3.  Abre el archivo **`index.html`** en tu navegador web de preferencia.
+Para ejecutar este proyecto localmente, sigue estos pasos:
 
-    git clone https://github.com/CristianRiquelmeF/alke-wallet.git
+    Clona el repositorio: git clone https://github.com/CristianRiquelmeF/api-breast-cancer.git
 
-Para ingresar a la aplicación, utiliza los siguientes datos simulados:
+---
 
 *   **Usuario:** `admin`
 *   **Contraseña:** `1234`
