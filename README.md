@@ -1,4 +1,4 @@
-# Alke Wallet 💰
+# Alke Wallet
 
 Simulación de una billetera virtual (E-wallet). Este proyecto es una aplicación web frontend que replica las funcionalidades básicas de una billetera digital, enfocándose en el diseño responsivo y la lógica de navegación y sesión.
 
@@ -29,6 +29,8 @@ Simulación de una billetera virtual (E-wallet). Este proyecto es una aplicació
 1.  Clona este repositorio o descarga el archivo ZIP.
 2.  Asegúrate de que la estructura de carpetas sea correcta (imágenes en `assets/img`, estilos en `assets/css`, scripts en `js/`).
 3.  Abre el archivo **`index.html`** en tu navegador web de preferencia.
+
+    git clone https://github.com/CristianRiquelmeF/alke-wallet.git
 
 Para ingresar a la aplicación, utiliza los siguientes datos simulados:
 
