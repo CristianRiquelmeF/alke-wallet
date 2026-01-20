@@ -23,7 +23,11 @@ Simulación de una billetera virtual (E-wallet). Este proyecto es una aplicació
     *   Ver saldo y transacciones recientes.
     *   Formularios simulados para depositar y enviar dinero.
 4.  **Diseño Responsivo:** Adaptable a dispositivos móviles y escritorio.
+5.  **Para probar en navegador ingresar credenciales:**
+  **Usuario:** `admin`
+  **Contraseña:** `1234`
 
+---
 
 Para ejecutar este proyecto localmente, clona el repositorio:
 
@@ -31,8 +35,6 @@ Para ejecutar este proyecto localmente, clona el repositorio:
 
 ---
 
-*   **Usuario:** `admin`
-*   **Contraseña:** `1234`
 
 ## Estructura
 
