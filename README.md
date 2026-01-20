@@ -25,7 +25,7 @@ Simulación de una billetera virtual (E-wallet). Este proyecto es una aplicació
 4.  **Diseño Responsivo:** Adaptable a dispositivos móviles y escritorio.
 
 
-Para ejecutar este proyecto localmente, sigue estos pasos:
+Para ejecutar este proyecto localmente, clona el repositorio:
 
     git clone https://github.com/CristianRiquelmeF/api-breast-cancer.git
 
