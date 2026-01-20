@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+
+/*Estilos generales*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Google Sans", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+i{
+    font-size: 25px;
+}
+
+h2{
+    font-size: 20px;
+}
+
+p{
+    margin: 0;
+}
+button.btn{
+    background: linear-gradient(163deg,rgba(56, 163, 165, 1) 0%, rgba(87, 204, 153, 1) 49%, rgba(128, 237, 153, 1) 100%);
+    color: white;
+    font-weight: 600;
+}
+
+button.btn:hover{
+    color: white;
+    
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.377);
+}
+
+.card{
+    min-height: 100px;
+    align-items: center;
+    justify-content: center;
+    transition: transform .5s;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.377);
+}
+
+
+/*Header*/
+
+header,
+.top-menu{
+    background: linear-gradient(163deg,rgba(56, 163, 165, 1) 0%, rgba(87, 204, 153, 1) 49%, rgba(128, 237, 153, 1) 100%);
+}
+
+header{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li a{
+    color: white;
+}
+
+/*Top menu*/
+.top-menu{
+    padding: 15px;
+}
+
+.top-menu .container .row{
+    align-items: center;
+}
+
+.top-menu .container .row div i{
+    color: white;
+}
+
+.top-menu .container .row div .brand{
+    padding: 15px 0 ;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.top-menu .container .row div .brand::before{
+    content: "\f555";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.top-menu .container .row div .avatar{
+    width: 50px;
+    border-radius: 50%;
+}
+
+/*main*/
+main{
+    height: 70dvh;
+    display: flex;
+    align-items: center;
+}
+
+#menu .row a p{
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(24, 24, 24);
+}
