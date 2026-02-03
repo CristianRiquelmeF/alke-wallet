@@ -1,127 +1,181 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 
+/* =========================
+  Variables
+========================= */
+:root{
+  --header-h: 72px;     /* alto aprox del header fijo */
+  --topmenu-h: 64px;
+}
 
-/*Estilos generales*/
+/* ========================= Estilos generales
+========================= */
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body{
-    font-family: "Google Sans", sans-serif;
+  font-family: "Google Sans", sans-serif;
+  /* como el header está fixed abajo, deja espacio para que no tape contenido */
+  padding-bottom: calc(var(--header-h) + env(safe-area-inset-bottom));
 }
 
 a{
-    text-decoration: none;
+  text-decoration: none;
 }
 
 i{
-    font-size: 25px;
+  font-size: clamp(20px, 4vw, 25px);
 }
 
 h2{
-    font-size: 20px;
+  font-size: clamp(16px, 3.5vw, 20px);
 }
 
 p{
-    margin: 0;
+  margin: 0;
 }
+
+/* ========================= Botones
+========================= */
 button.btn{
-    background: linear-gradient(163deg,rgba(56, 163, 165, 1) 0%, rgba(87, 204, 153, 1) 49%, rgba(128, 237, 153, 1) 100%);
-    color: white;
-    font-weight: 600;
+  background: linear-gradient(163deg, rgba(56, 163, 165, 1) 0%, rgba(87, 204, 153, 1) 49%, rgba(128, 237, 153, 1) 100%);
+  color: white;
+  font-weight: 600;
 }
 
 button.btn:hover{
-    color: white;
-    
-    box-shadow:  0 0 10px rgba(0, 0, 0, 0.377);
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.377);
 }
 
+/* =========================
+Cards / accesos del menú   (ojo: Bootstrap también usa .card, pero esto funciona)
+========================= */
 .card{
-    min-height: 100px;
-    align-items: center;
-    justify-content: center;
-    transition: transform .5s;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .card:hover{
-    transform: scale(1.05);
-    box-shadow:  0 0 10px rgba(0, 0, 0, 0.377);
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.20);
 }
 
-
-/*Header*/
-
+/* =========================
+Header (barra inferior)
+========================= */
 header,
 .top-menu{
-    background: linear-gradient(163deg,rgba(56, 163, 165, 1) 0%, rgba(87, 204, 153, 1) 49%, rgba(128, 237, 153, 1) 100%);
+  background: linear-gradient(163deg, rgba(56, 163, 165, 1) 0%, rgba(87, 204, 153, 1) 49%, rgba(128, 237, 153, 1) 100%);
 }
 
 header{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 20px 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  padding: 12px 0;
 }
 
 header nav ul{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* para que no se rompa en pantallas pequeñas */
+  justify-content: center;
+  gap: clamp(10px, 4vw, 20px);
+  list-style: none;
+  padding: 0 12px;
+  margin: 0;
 }
 
 header nav ul li a{
-    color: white;
+  color: white;
 }
 
-/*Top menu*/
+/* =========================
+  Top menu
+========================= */
 .top-menu{
-    padding: 15px;
+  padding: 15px;
 }
 
 .top-menu .container .row{
-    align-items: center;
+  align-items: center;
 }
 
 .top-menu .container .row div i{
-    color: white;
+  color: white;
 }
 
 .top-menu .container .row div .brand{
-    padding: 15px 0 ;
-    margin: 0;
-    font-size: 20px;
-    font-weight: 600;
-    color: white;
+  padding: 15px 0;
+  margin: 0;
+  font-size: clamp(18px, 3.5vw, 20px);
+  font-weight: 600;
+  color: white;
 }
 
 .top-menu .container .row div .brand::before{
-    content: "\f555";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    font-size: 20px;
-    margin-right: 10px;
+  content: "\f555";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 20px;
+  margin-right: 10px;
 }
 
-.top-menu .container .row div .avatar{
-    width: 50px;
-    border-radius: 50%;
+.avatar{
+  width: 50px;
+  max-width: 50px;
+  border-radius: 50%;
 }
 
-/*main*/
+/* =========================
+  Main
+========================= */
 main{
-    height: 70dvh;
-    display: flex;
-    align-items: center;
+  height: auto; /* quitamos altura rígida */
+  min-height: calc(100dvh - var(--topmenu-h) - var(--header-h));
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
 }
 
 #menu .row a p{
-    text-align: center;
-    margin-top: 10px;
-    color: rgb(24, 24, 24);
+  text-align: center;
+  margin-top: 10px;
+  color: rgb(24, 24, 24);
+}
+
+/* =========================
+  reakpoints
+========================= */
+@media (max-width: 576px){
+  header{
+    padding: 10px 0;
+  }
+
+  .top-menu{
+    padding: 10px;
+  }
+
+  .avatar{
+    width: 40px;
+    max-width: 40px;
+  }
+
+  /* si en móvil quieres que los items se separen mejor */
+  header nav ul{
+    justify-content: space-around;
+  }
+
+  /* en móvil, reduce el “salto” del hover (opcional) */
+  .card:hover{
+    transform: scale(1.02);
+  }
 }

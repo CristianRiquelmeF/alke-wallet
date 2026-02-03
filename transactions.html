@@ -52,9 +52,17 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col">
-                    <h1 class="text-center mb-4">Transacciones Recientes</h1>
+                    <h1 class="text-center mb-2">Transacciones Recientes</h1>
+                    
+                    <!-- CAMBIO PRINCIPAL: -->
+                    <!-- Agregué este h3 con el ID 'saldo-display'. -->
+                    <!-- Aquí el JavaScript inyectará el saldo actualizado automáticamente -->
+                    <h3 class="text-center text-success mb-4">
+                        Saldo Actual: <span id="saldo-display">$0</span>
+                    </h3>
                 </div>
             </div>
+
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-8"> 
                     <div class="table-responsive"> 
@@ -67,19 +75,9 @@
                                     <th class="text-end">Monto</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>01/09/2025</td>
-                                    <td>Depósito</td>
-                                    <td class="text-success fw-bold">Ingreso</td> 
-                                    <td class="text-success text-end fw-bold">+50.000</td>
-                                </tr>
-                                <tr>
-                                    <td>15/01/2026</td>
-                                    <td>Envio a Dest 2</td>
-                                    <td class="text-danger fw-bold">Egreso</td> 
-                                    <td class="text-danger text-end fw-bold">-15.000</td>
-                                </tr>
+                            <!-- Le puse el ID 'cuerpo-tabla' para encontrarlo con JS -->
+                            <tbody id="cuerpo-tabla">
+    <!-- Aquí JavaScript insertará las filas automáticamente -->
                             </tbody>
                         </table>
                     </div>
@@ -95,7 +93,7 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     
-    <script src="js/app.js"></script>
+    <!-- Tu script principal -->
     <script src="js/script.js"></script>
 </body>
 </html>
